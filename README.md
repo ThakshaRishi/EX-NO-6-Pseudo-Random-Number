@@ -13,17 +13,22 @@ End the program.
 # PROGRAM:
 
 ```
-import random
-def main():
-    count = int(input("Enter the number of random numbers to generate: "))
-    min_val = int(input("Enter the minimum value: "))
-    max_val = int(input("Enter the maximum value: "))
-    print("\nPseudorandom numbers:")
-    for _ in range(count):
-        print(random.randint(min_val, max_val), end=' ')
-    print()
-if __name__ == "__main__":
-    main()
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <time.h>
+ int main() {
+ int i, n;
+ srand(time(0));
+ printf("Enter how many pseudorandom numbers you want to generate: ");
+ scanf("%d", &n);
+ printf("Generating %d pseudorandom numbers between 0 and 99:\n", n);
+ for (i = 0; i < n; i++) {
+ int randomNumber = rand() % 100;
+ printf("%d ", randomNumber);
+ }
+ printf("\n");
+ return 0;
+ }
 ```
 
 # OUTPUT:
